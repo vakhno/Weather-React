@@ -5,6 +5,7 @@ import Content from '../Content/Content'
 import WeatherSearch from '../WeatherSearch/WeatherSearch'
 import WeatherData from '../WeatherData/WeatherData'
 import Error from '../Error/Error'
+import Footer from '../Footer/Footer'
 import axios from 'axios'
 import './Main.sass'
 
@@ -35,6 +36,7 @@ const Main = () => {
 					{weather && <WeatherData />}
 					{error && <Error />}
 				</Context.Provider>
+				<Footer />
 			</Content>
 		</div>
 	)
