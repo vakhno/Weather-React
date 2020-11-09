@@ -5,6 +5,7 @@ import Content from '../Content/Content'
 import WeatherSearch from '../WeatherSearch/WeatherSearch'
 import WeatherData from '../WeatherData/WeatherData'
 import Error from '../Error/Error'
+import DateTime from '../DataTime/DataTime'
 import Footer from '../Footer/Footer'
 import axios from 'axios'
 import './Main.sass'
@@ -31,6 +32,7 @@ const Main = () => {
 		<div className='main'>
 			<Header />
 			<Content>
+				<DateTime />
 				<Context.Provider value={{ api_call: api_call, weather: weather, city: city, error: error }}>
 					<WeatherSearch />
 					{weather && <WeatherData />}
