@@ -7,7 +7,7 @@
   
 ## Open project on your machine
 
-### `git clone https://github.com/vakhno/Validation-form-React.git`
+### `git clone https://github.com/vakhno/Weather-React.git`
 
 Cloning a project to your directory
 
