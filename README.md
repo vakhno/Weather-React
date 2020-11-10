@@ -4,6 +4,7 @@
   - React.js(create react app)
   - React Hooks(useState, useContext, useEffect)
   - OpenWeatherAPI
+  - GoogleMap(Marker)
   
 ## Open project on your machine
 
