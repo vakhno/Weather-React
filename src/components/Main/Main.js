@@ -4,6 +4,7 @@ import Header from '../Header/Header'
 import Content from '../Content/Content'
 import WeatherSearch from '../WeatherSearch/WeatherSearch'
 import WeatherData from '../WeatherData/WeatherData'
+import CustomMap from '../CustomMap/CustomMap'
 import Error from '../Error/Error'
 import DateTime from '../DataTime/DataTime'
 import Footer from '../Footer/Footer'
@@ -13,6 +14,8 @@ import './Main.sass'
 const Main = () => {
 	const [weather, setWeather] = useState()
 	const [city, setCity] = useState();
+	const [country, setCountry] = useState()
+	const [coord, setCoord] = useState()
 	const [error, setError] = useState()
 
 	const api_call = async e => {
@@ -26,6 +29,9 @@ const Main = () => {
 			const response = await request
 			setWeather(response.data.main)
 			setCity(response.data.name)
+			setCoord(response.data.coord)
+			console.log(response.data)
+			setCountry(response.data.sys.country)
 			setError(null)
 		} catch (error) {
 			return setError('Please enter correct name of the city'), setWeather(null)
@@ -37,9 +43,10 @@ const Main = () => {
 			<Header />
 			<Content>
 				<DateTime />
-				<Context.Provider value={{ api_call: api_call, weather: weather, city: city, error: error }}>
+				<Context.Provider value={{ api_call: api_call, weather: weather, city: city, error: error, country: country, coord: coord }}>
 					<WeatherSearch />
 					{weather && <WeatherData />}
+					{weather && <CustomMap />}
 					{error && <Error />}
 				</Context.Provider>
 				<Footer />

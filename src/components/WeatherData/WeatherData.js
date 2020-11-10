@@ -3,11 +3,11 @@ import Context from '../../Context'
 import './WeatherData.sass'
 
 const WeatherData = () => {
-	const { weather, city } = useContext(Context)
+	const { weather, city, country } = useContext(Context)
 	const { temp, humidity, pressure } = weather
 	return (
 		<div className="weather-data">
-			<p className="weather__tagline">Weather forecast for <span className="weather-data__city">{city}</span></p>
+			<p className="weather__tagline">Weather forecast for <span className="weather-data__city">{city}</span>, <span className="weather-data__city">{country}</span></p>
 			<div className="weather-data__box">
 				<span className="weather-data__property">
 					<p className="weather-data__title">Temperature</p>

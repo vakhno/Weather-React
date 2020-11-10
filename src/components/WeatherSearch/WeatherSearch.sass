@@ -1,19 +1,17 @@
 @import '../../App'
 
 .weather-search
+	margin-bottom: 25px
 	&__form
-		text-align: center
-		margin-top: 3rem
-		margin-bottom: 5rem
+		display: flex
+		align-items: center
+		justify-content: center
 	&__input
 		display: inline-block
 		border: solid 2px transparent
 		background-color: rgba($colour-2, 0.1)
-		padding: 0.5rem 3rem
-		border-radius: 2px
-		margin-right: 2rem
-		padding-left: 1rem
-		padding-right: 4rem
+		padding: 10px 65px 10px 15px
+		border-radius: 3px
 		&:focus
 			outline: none
 			border-bottom: solid 2px $colour-2
@@ -21,14 +19,12 @@
 		display: inline-block
 		text-align: center
 		background-color: transparent
-		font-size: 3rem
+		font-size: 16px
 		height: 30px
 		width: 30px
 		position: relative
-		top: 0.9rem
-		margin-left: -6rem
+		margin-left: -30px
 	&__button
-		padding: 1.2rem
 		color: $colour-2
 		position: absolute
 		top: 50%
