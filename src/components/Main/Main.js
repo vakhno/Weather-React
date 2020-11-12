@@ -49,8 +49,8 @@ const Main = () => {
 					{weather && <CustomMap />}
 					{error && <Error />}
 				</Context.Provider>
-				<Footer />
 			</Content>
+			<Footer />
 		</div>
 	)
 }

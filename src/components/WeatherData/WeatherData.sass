@@ -1,22 +1,28 @@
 @import '../../App'
 
 .weather-data
+	align-self: center
 	text-align: center
 	&__city
 		color: $colour-2
+	&__tagline
+		margin-bottom: 30px
 	&__box
 		display: flex
 		align-items: center
-		justify-content: center
-		margin: 30px 0 30px 0
+		justify-content: space-between
+		padding: 0 20px
+		margin-bottom: 30px
 		@include respond(tablet)
 			margin-top: 20px
 		@include respond(largePhone)
 			margin-top: 40px
-	&__property
-		margin: 0 45px
 		@include respond(smallPhone)
-			margin: 0 30px
+			margin-bottom: 0px
+			flex-direction: column
+	&__property
+		@include respond(smallPhone)
+			margin-bottom: 30px
 	&__title
 		font-size: 14px
 		text-transform: uppercase

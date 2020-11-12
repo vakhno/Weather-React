@@ -7,7 +7,7 @@ const WeatherData = () => {
 	const { temp, humidity, pressure } = weather
 	return (
 		<div className="weather-data">
-			<p className="weather__tagline">Weather forecast for <span className="weather-data__city">{city}</span>, <span className="weather-data__city">{country}</span></p>
+			<p className="weather-data__tagline">Weather forecast for <span className="weather-data__city">{city}</span>, <span className="weather-data__city">{country}</span></p>
 			<div className="weather-data__box">
 				<span className="weather-data__property">
 					<p className="weather-data__title">Temperature</p>
