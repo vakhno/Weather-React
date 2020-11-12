@@ -3,7 +3,7 @@
 ### In the project I used:
   - React.js(create react app)
   - React Hooks(useState, useContext, useEffect)
-  - OpenWeatherAPI
+  - OpenWeatherAPI(axios)
   - GoogleMap(Marker)
   
 ## Open project on your machine
